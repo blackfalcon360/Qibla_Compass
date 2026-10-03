@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Distance: -- km"
+        android:textColor="@color/gold"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/compassContainer"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/kaabaEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="🕋"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:id="@+id/arrowImageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@id/kaabaEmoji"
+            android:layout_centerHorizontal="true"
+            android:src="@android:drawable/ic_menu_compass"
+            android:tint="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/degreeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0° Qibla"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dmsCoordinatesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="GPS: Waiting for location..."
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>
